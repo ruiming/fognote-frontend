@@ -6,11 +6,11 @@ import { userStore } from '../../stores';
 import './App.css';
 import Login from '../Login/Login';
 import Register from '../Register/Register';
+import Home from '../Home/Home';
 
 class App extends React.Component {
   render() {
-    console.log('userStore.user', userStore.user);
-    if (userStore.user) {
+    if (!userStore.user) {
       return (
         <div className="App">
           <Menu>
@@ -18,7 +18,7 @@ class App extends React.Component {
             <MenuItem icon="图标2" title="发生发啥是否发生"/>
           </Menu>
           <Switch>
-            <Route exact={true} path="/input" component={Menu} />
+            <Route exact={true} path="/" component={Home} />
           </Switch>
         </div>
       );

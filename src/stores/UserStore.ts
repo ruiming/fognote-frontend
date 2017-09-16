@@ -10,7 +10,6 @@ export class UserStore {
   @observable user: UserInterface;
 
   @action login = async (body: LoginInterface) => {
-    console.log(body);
     const res = await axios.post('/user/login', body);
     this.user = res.data;
   }
