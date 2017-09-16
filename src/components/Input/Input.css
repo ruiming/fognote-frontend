@@ -1,0 +1,15 @@
+.inputField__input {
+  padding: 5px 8px;
+  border: 1px solid #d9d9d9;
+  width: 100%;
+  border-radius: 4px;
+  transition: all .3s;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.inputField__input::-webkit-input-placeholder {
+  color: rgb(196, 196, 196);
+  font-size: 0.9rem;
+  font-weight: 300;
+}

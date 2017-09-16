@@ -1,0 +1,24 @@
+.MenuItem {
+  display: flex;
+  text-align: left;
+  padding: 10px 10px 10px 35px;
+  font-size: .84375rem;
+  position: relative;
+}
+
+.MenuItem__icon {
+  padding-right: 10px;
+}
+
+.MenuItem__link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: transparent;
+}
+
+.MenuItem:hover {
+  background: #d6d6d6;
+}
