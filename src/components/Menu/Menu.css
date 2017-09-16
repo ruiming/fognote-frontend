@@ -1,8 +1,4 @@
 .menu {
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
   background: #f6f6f6;
   width: 270px;
   display: flex;

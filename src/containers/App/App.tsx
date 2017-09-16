@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Menu from '../../components/Menu/Menu';
 import MenuItem from '../../components/MenuItem/MenuItem';
+import Container from '../../components/Container/Container';
 import { userStore } from '../../stores';
 import './App.css';
 import Login from '../Login/Login';
@@ -17,9 +18,11 @@ class App extends React.Component {
             <MenuItem icon="图标1" title="啊啊所大所大所多"/>
             <MenuItem icon="图标2" title="发生发啥是否发生"/>
           </Menu>
-          <Switch>
-            <Route exact={true} path="/" component={Home} />
-          </Switch>
+          <Container>
+            <Switch>
+              <Route exact={true} path="/" component={Home} />
+            </Switch>
+          </Container>
         </div>
       );
     } else {
