@@ -2,6 +2,13 @@
   "name": "fognote-frontend",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "node scripts/start.js",
+    "build": "node scripts/build.js",
+    "test": "node scripts/test.js --env=jsdom",
+    "commit": "git-cz",
+    "commitmsg": "validate-commit-msg"
+  },
   "dependencies": {
     "@types/axios": "^0.14.0",
     "@types/jest": "^20.0.8",
@@ -51,10 +58,10 @@
     "webpack-manifest-plugin": "1.1.0",
     "whatwg-fetch": "2.0.3"
   },
-  "scripts": {
-    "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+  "devDependencies": {
+    "cz-conventional-changelog": "^2.0.0",
+    "husky": "^0.14.3",
+    "validate-commit-msg": "^2.14.0"
   },
   "jest": {
     "mapCoverage": true,
@@ -102,6 +109,11 @@
     "presets": [
       "react-app"
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
   },
   "eslintConfig": {
     "extends": "react-app"
