@@ -11,17 +11,12 @@ import * as stores from './stores';
 axios.defaults.baseURL = 'http://127.0.0.1:8000/v1';
 
 ReactDOM.render(
-  <App />,
-  document.getElementById('root') as HTMLElement
-);
-
-ReactDOM.render(
   <Provider {...stores}>
     <BrowserRouter>
       <App/>
     </BrowserRouter>
   </Provider>,
-  document.getElementById('root')
+  document.getElementById('root')  as HTMLElement
 );
 
 registerServiceWorker();
