@@ -6,10 +6,15 @@ import { observer } from 'mobx-react';
 import { observable } from 'mobx';
 import { LoginInterface } from '../../interfaces/UserInterface';
 import { userStore } from '../../stores';
+import { withRouter } from 'react-router';
+import * as H from 'history';
 import './Login.css';
 
 @observer
-export default class Login extends React.Component {
+@withRouter
+export default class Login extends React.Component<{
+  history: H.History
+}, {}> {
   @observable email: string;
   @observable password: string;
 
@@ -18,6 +23,7 @@ export default class Login extends React.Component {
       email: this.email,
       password: this.password
     });
+    this.props.history.replace('/');
   }
 
   setEmail = (email: string) => this.email = email;

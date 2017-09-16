@@ -5,9 +5,11 @@ import MenuItem from '../../components/MenuItem/MenuItem';
 import { userStore } from '../../stores';
 import './App.css';
 import Login from '../Login/Login';
+import Register from '../Register/Register';
 
 class App extends React.Component {
   render() {
+    console.log('userStore.user', userStore.user);
     if (userStore.user) {
       return (
         <div className="App">
@@ -21,7 +23,12 @@ class App extends React.Component {
         </div>
       );
     } else {
-      return <Login />;
+      return (
+        <Switch>
+          <Route exact={true} path="/" component={Login} />
+          <Route path="/register" component={Register} />
+        </Switch>
+      );
     }
     
   }
