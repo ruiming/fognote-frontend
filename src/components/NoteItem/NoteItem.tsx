@@ -1,25 +1,26 @@
 import * as React from 'react';
 import { NoteInterface } from '../../interfaces/NoteInterface';
+import './NoteItem.css';
+import { observer } from 'mobx-react';
 
 interface NoteItemPropsInterface {
   data: NoteInterface;
 }
 
+@observer
 export default class NoteItem extends React.Component<NoteItemPropsInterface, {}> {
 
   render () {
     return (
-      <div>
-        <div>
+      <div className="note">
+        <div className="note_img">
           <img src="#" />
         </div>
-        <div>
-          <p>标题</p>
+        <div className="note_intro">
+          <p>{this.props.data.title}</p>
           <small>
-            <span>#放假吧</span>
-            <span>#让我去</span>
-            <span>#刚发的</span>
-            安达市大所大所多撒大所大所大所大所大所多
+            {(this.props.data.tags || []).map((tag, index) => <a key={index}><span>{tag}</span></a>)}
+            {this.props.data.summary}
           </small>
         </div>
       </div>

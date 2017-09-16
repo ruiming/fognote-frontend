@@ -14,7 +14,7 @@ export default class Home extends React.Component {
   render () {
     return (
       <section className="home">
-        <div>
+        <div className="home__notelist">
           {(noteStore.notes || []).map((note, index) => <NoteItem data={note} key={index} />)}
         </div>
       </section>

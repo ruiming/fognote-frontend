@@ -12,7 +12,7 @@ export interface NoteInterface {
   /** 内容 */
   description: string;
   /** 标签 */
-  tags: string[];
+  tags?: string[];
   /** 创建时间 */
   createdAt: string;
   /** 更新时间 */

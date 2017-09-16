@@ -1,0 +1,19 @@
+.note {
+  display: flex;
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.note:last-child {
+  border-bottom: none;
+}
+
+.note:hover {
+  background: #f6f6f6;
+  cursor: pointer;
+}
+
+.note_intro a {
+  padding: 0 5px;
+}
